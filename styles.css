@@ -27,9 +27,9 @@ h2 {
 }
 
 input, button {
-    width: 100%;
+    width: 80%;
     padding: 12px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 1px solid #aaa;
     margin-top: 10px;
 }
