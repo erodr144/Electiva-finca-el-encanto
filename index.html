@@ -1,152 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Finca El Encanto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ===========================
-    PANTALLA 1 - LOGIN
-=========================== -->
+<!-- =====  SCREEN 1 – LOGIN  ===== -->
 <div id="screen1" class="screen active">
     <h2>Bienvenido a la Finca El Encanto</h2>
 
     <input type="email" placeholder="Correo Electrónico" id="login_email">
     <input type="password" placeholder="Contraseña" id="login_pass">
 
+    <!-- botón único y centrado -->
     <button id="btn-ingresar">INGRESAR</button>
-    <button id="btn-ingresar">INGRESAR</button>
-    <video controls width="600" autoplay muted>
-    <source src=""video aplicacion finca.mp4"" type="video/mp4">
-    <source src="ruta/a/tu/video.webm" type="video/webm">
-    Tu navegador no soporta la etiqueta de video.
+
+    <!-- video centrado y proporcional -->
+    <video controls autoplay muted>
+        <source src="video aplicacion finca.mp4" type="video/mp4">
+        <source src="ruta/a/tu/video.webm" type="video/webm">
+        Tu navegador no soporta video.
     </video>
 </div>
 
-<!-- ===========================
-    PANTALLA 2 - MENÚ
-=========================== -->
-<div id="screen2" class="screen">
-    <h2>Menú Principal</h2>
+<!-- =====  RESTO DE PANTALLAS (vacías de momento)  ===== -->
+<div id="screen2"  class="screen"></div>
+<div id="screen8"  class="screen"></div>
+<div id="screen9"  class="screen"></div>
 
-    <button data-screen="screen3">GALERÍA DE FOTOS</button>
-    <button data-screen="screen4">SERVICIOS</button>
-    <button data-screen="screen5">DATOS DE CONTACTO</button>
-    <button data-screen="screen6">MÉTODOS DE PAGO</button>
-    <button data-screen="screen7">RESERVAR</button>
-    <button data-screen="screen8">VER RESUMEN</button>
-
-    <button class="volver" data-screen="screen1">CERRAR SESIÓN</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 3 - GALERÍA
-=========================== -->
-<div id="screen3" class="screen">
-    <h2>Galería de la Finca</h2>
-
-    <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" />
-        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" />
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" />
-        <img src="https://images.unsplash.com/photo-1505691761745-4cbb2a6d0f04" />
-    </div>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 4 - SERVICIOS
-=========================== -->
-<div id="screen4" class="screen">
-    <h2>Servicios</h2>
-
-    <ul>
-        <li>🏊 Piscina</li>
-        <li>🔥 Zona BBQ</li>
-        <li>🛌 Habitaciones amplias</li>
-        <li>🌳 Zonas verdes</li>
-        <li>📶 Wifi</li>
-    </ul>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 5 - CONTACTO
-=========================== -->
-<div id="screen5" class="screen">
-    <h2>Datos de Contacto</h2>
-
-    <p><strong>Asesor:</strong> Elkin Rodriguez</p>
-    <p><strong>Teléfono:</strong> 3123872164</p>
-    <p><strong>Correo:</strong> asesor@finca.com</p>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 6 - MÉTODOS DE PAGO
-=========================== -->
-<div id="screen6" class="screen">
-    <h2>Métodos de Pago</h2>
-
-    <button>Bancolombia</button>
-    <button>Nequi</button>
-    <button>Daviplata</button>
-    <button>PSE</button>
-    <button>Efectivo</button>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 7 - FORMULARIO DE RESERVA
-=========================== -->
-<div id="screen7" class="screen">
-    <h2>Reservar</h2>
-
-    <input type="text" id="res_nombre" placeholder="Nombre completo">
-    <input type="text" id="res_doc" placeholder="Número de documento">
-    <label>Fecha de entrada</label>
-    <input type="date" id="res_entrada">
-    <label>Fecha de salida</label>
-    <input type="date" id="res_salida">
-    <input type="number" id="res_huespedes" placeholder="Cantidad de huéspedes">
-
-    <button id="btn-generar">GENERAR RESERVA</button>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 8 - RESUMEN
-=========================== -->
-<div id="screen8" class="screen">
-    <h2>Resumen de la Reserva</h2>
-
-    <div id="resumen-contenido">
-        <p>No hay reserva generada aún.</p>
-    </div>
-
-    <button id="btn-pagar">PAGAR</button>
-
-    <button class="volver" data-screen="screen2">VOLVER</button>
-</div>
-
-<!-- ===========================
-    PANTALLA 9 - PAGO EXITOSO
-=========================== -->
-<div id="screen9" class="screen">
-    <h2>¡Pago Exitoso!</h2>
-    <p>Tu reserva ha sido confirmada.</p>
-
-    <button class="volver" data-screen="screen2">VOLVER AL MENÚ</button>
-</div>
-
-<script src="script.js"></script>
+<script>
+/* ----------  NAVEGACIÓN BÁSICA  ---------- */
+function showScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+document.getElementById('btn-ingresar').addEventListener('click',()=>showScreen('screen2'));
+</script>
 </body>
 </html>
